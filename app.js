@@ -32,5 +32,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 let routes = require('./routes/routes.js')(app)
  
 let server = app.listen(3000, function () {
-   console.log('Listening on port %s...', server.address().port)
+   console.log('App ligado na porta %s...', server.address().port)
 })
