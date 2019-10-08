@@ -1,5 +1,4 @@
 let express = require('express')
-let path = require('path')
 let bodyParser = require('body-parser')
 let mongoose = require('mongoose')
 let app = express()
@@ -30,6 +29,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
  
 let routes = require('./routes/routes.js')(app)
  
-let server = app.listen(3000, function () {
+let server = app.listen(80, function () {
    console.log('App ligado na porta %s...', server.address().port)
 })
