@@ -29,6 +29,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
  
 let routes = require('./routes/routes.js')(app)
  
-let server = app.listen(80, function () {
+let server = app.listen(3000, function () {
    console.log('App ligado na porta %s...', server.address().port)
 })
