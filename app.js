@@ -34,5 +34,5 @@ let routes = require('./routes/routes.js')(app)
  
 let server = app.listen(3000, function () {
     console.log(process.env.APP_URL)
-   console.log('App ligado na porta %s...', server.address().port)
+    console.log('App na porta %s...', server.address().port)
 })
