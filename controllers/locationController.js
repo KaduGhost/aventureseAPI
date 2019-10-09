@@ -79,7 +79,7 @@ module.exports = {
             return res.status(500).json(err)
          }
          const {_id, nome, descricao, icone, imagem, endereco, local} = locations
-         res.status(200).json({_id,nome,descricao,icone,imagem,endereco,local,link:`https://m.uber.com/ul/?client_id=xgl5Pt5xCtTvO03A9X49bG8XenyO75Tw&action=setPickup&pickup[latitude]=${localInicial.latitude}&pickup[longitude]=${localInicial.longitude}&dropoff[latitude]=${local.latitude}&dropoff[longitude]=${local.longitude}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d`})
+         res.status(200).json({_id,nome,descricao,icone,imagem,endereco,local,link:`https://m.uber.com/ul/?client_id=xgl5Pt5xCtTvO03A9X49bG8XenyO75Tw&action=setPickup&pickup[latitude]=${localInicial[0]}&pickup[longitude]=${localInicial[1]}&dropoff[latitude]=${local[0]}&dropoff[longitude]=${local[1]}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d`})
       })
    },
 
@@ -91,7 +91,7 @@ module.exports = {
          let slot = 0
          for (let value of locations) {
             const { _id, nome, descricao, icone, imagem, endereco, local} = value
-            locais[slot++] = {_id,nome,descricao,icone,imagem,endereco,local,link:`https://m.uber.com/ul/?client_id=xgl5Pt5xCtTvO03A9X49bG8XenyO75Tw&action=setPickup&pickup[latitude]=${localInicial.latitude}&pickup[longitude]=${localInicial.longitude}&dropoff[latitude]=${local.latitude}&dropoff[longitude]=${local.longitude}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d`}
+            locais[slot++] = {_id,nome,descricao,icone,imagem,endereco,local,link:`https://m.uber.com/ul/?client_id=xgl5Pt5xCtTvO03A9X49bG8XenyO75Tw&action=setPickup&pickup[latitude]=${localInicial[0]}&pickup[longitude]=${localInicial[1]}&dropoff[latitude]=${local[0]}&dropoff[longitude]=${local[1]}&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d`}
          }
          res.status(200).json(locais)
       })
